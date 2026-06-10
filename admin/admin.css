@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:#f4f4f4;
+}
+
+.admin-container{
+    display:flex;
+    height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#3b2a1a;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:12px;
+    margin:10px 0;
+    background:#5a3d25;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+.section{
+    display:none;
+}
+
+.section.active{
+    display:block;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    flex:1;
+    text-align:center;
+}
+
+/* LIST ITEMS */
+.item-box{
+    background:white;
+    padding:10px;
+    margin:10px 0;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+button{
+    background:#3b2a1a;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.clear-btn{
+    background: darkred;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.clear-btn:hover{
+    opacity: 0.8;
+}
+@media (max-width: 768px){
+
+    .admin-container{
+        flex-direction: column;
+    }
+
+    /* Sidebar يبقى فوق */
+    .sidebar{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    /* المحتوى */
+    .main{
+        padding: 10px;
+    }
+
+    /* الكروت */
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        margin-bottom: 10px;
+    }
+
+    /* عناصر الطلبات */
+    .item-box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .item-box span{
+        word-break: break-word;
+    }
+}
+
+.item-box span{
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+}
+

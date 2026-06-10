@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuCafé</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="#">Fu<span>Café</span></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="right">
+        <button class="mode-btn">🌙</button>
+
+        <div class="cart">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </div>
+
+</header>
+
+<!-- HERO -->
+<section class="content">
+    <h1>FuCafé</h1>
+    <p>Ready To Make Your Morning Brighter</p>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+
+    <div class="menu-header">
+        <h3>Menu</h3>
+        <h4>Our Drinks</h4>
+    </div>
+
+    <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="hot">Hot</button>
+        <button data-filter="ice">Ice</button>
+        <button data-filter="frappe">Frappe</button>
+    </div>
+
+    <div class="menu-content">
+
+        <div class="item hot">
+            <img src="img/hot.jpg">
+            <h2>Hot Coffee</h2>
+            <p>80 EGP</p>
+            <button class="add-cart" data-name="Hot Coffee" data-price="50">Add</button>
+        </div>
+
+        <div class="item ice">
+            <img src="img/images.jpg">
+            <h2>Ice Coffee</h2>
+            <p>95 EGP</p>
+            <button class="add-cart" data-name="Ice Coffee" data-price="45">Add</button>
+        </div>
+
+        <div class="item frappe">
+            <img src="img/download.jpg">
+            <h2>Frappuccino</h2>
+            <p>90 EGP</p>
+            <button class="add-cart" data-name="Frappuccino" data-price="60">Add</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you</p>
+
+    <div class="contact-info">
+
+        <div class="contact-item">
+            <h3>📧 Email</h3>
+            <p>fucafe@gmail.com</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>📷 Instagram</h3>
+            <p>@fucafe_official</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>📍 Location</h3>
+            <p>Cairo, Egypt</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="booking" class="booking">
+
+    <h2>Book a Table</h2>
+
+    <input type="text" id="bookName" placeholder="Your Name">
+    <input type="date" id="bookDate">
+    <input type="time" id="bookTime">
+
+    <button onclick="makeBooking()" class="book-btn">
+        Book Now
+    </button>
+
+</section>
+
+
+<footer>
+    <p>© 2026 FuCafé</p>
+</footer>
+
+<!-- CART -->
+<div class="cart-box" id="cart-box">
+
+    <h3>Your Cart</h3>
+
+    <div id="cart-items"></div>
+
+    <p>Total: <span id="total-price">0</span> EGP</p>
+
+    <!-- ORDER TYPE -->
+    <select id="orderType">
+        <option value="Dine In">Dine In (Drink here)</option>
+        <option value="Delivery">Delivery</option>
+    </select>
+
+    <!-- CHECKOUT FORM -->
+    <div class="checkout-form">
+
+        <input type="text" id="customerName" placeholder="Your Name">
+        <input type="text" id="customerPhone" placeholder="Phone Number">
+        <input type="text" id="customerAddress" placeholder="Address (optional)">
+
+    </div>
+
+    <button onclick="checkout()" class="checkout-btn">
+        Checkout
+    </button>
+
+</div>
+
+<div class="overlay"></div>
+<div class="toast" id="toast">Added ✔</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
